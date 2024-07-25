@@ -5,7 +5,7 @@ export const extendedTheme = {
 			},
 			colors:{
 				primary:'#C8FF00',
-				dark:'#1E1E1E'
+				dark:'#000'
 
 			},
 			screens:{

@@ -1,48 +1,26 @@
 import type { MetaFunction } from "@remix-run/node";
-
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Los Bacteria" },
+    { name: "Ideas Contagiosas", content: "Los Bacteria" },
   ];
 };
 
 export default function Index() {
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <main>
+    <div className="font-kiffoR flex align-middle justify-center  bg-#1E1E1E">
+      <div className="flex flex-col gap-3 xs:p-5 md:p-6 md:max-w-[600px] ">
+      <p className="text-primary text-25">Si estás leyendo esto, felicidades, oficialmente has sido infectado. Ya no hay vuelta atrás. Lo único que te queda, es dejar tu correo para enterarte de lo que viene.  </p>
+        <form className="flex flex-col gap-2">
+          <input placeholder="Tu correo aqui" className="w-[220px] bg-dark border-primary text-primary border "/>
+          <button className="text-primary w-fit	 text-25" type="submit">Notificame</button>
+        </form> 
+      </div>
+
+
     </div>
+    </main>
+
   );
 }

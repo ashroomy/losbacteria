@@ -5,7 +5,14 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import "./tailwind.css";
+import { LinksFunction } from "@remix-run/node";
+import styles from "./tailwind.css?url";
+import kiffoRegular from './assets/Kiffo-BT-Regular.woff'
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+  {rel:'', href:kiffoRegular}
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

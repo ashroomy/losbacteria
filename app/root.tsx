@@ -8,10 +8,12 @@ import {
 import { LinksFunction } from "@remix-run/node";
 import styles from "./tailwind.css?url";
 import kiffoRegular from './assets/Kiffo-BT-Regular.woff'
+import bacteriaFont from './assets/BacteriaBT.woff2'
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
-  {rel:'', href:kiffoRegular}
+  {rel:'', href:kiffoRegular},
+  {rel:'', href:bacteriaFont}
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

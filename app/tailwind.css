@@ -22,9 +22,18 @@
         src: url("/assets/fonts/Kiffo-BT-Medium.woff");
         font-weight: 700;
       }
+    @font-face {
+      font-family: 'bacteria';
+      src:local('bacteria'), url("./assets/BacteriaBT.woff2");
+    }
 
     body {
         font-family: 'kiffoR' sans-serif;
         background-color: #000;
+
+    }
+
+    .bg-squares{
+      background: url("./assets/img/bg-pattern.png")  repeat;
     }
   }

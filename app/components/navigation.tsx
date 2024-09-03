@@ -1,4 +1,4 @@
-import { InteractiveMarquee } from "./marquee";
+import Marquee from "./marquee";
 
 export function Navigation() {
   return <div>
@@ -33,20 +33,7 @@ export function Navigation() {
 
 
   </nav>
-  <InteractiveMarquee>
-    <h6 className="">
-        IDEAS 
-    </h6>
-    <h6 className="pr-[5px]">
-       CONTAGIOSAS 
-    </h6>
-    <h6 className="">
-        IDEAS  
-    </h6>
-    <h6 className="pr-[5px]">
-        CONTAGIOSAS  
-    </h6>
-  </InteractiveMarquee>
+  <Marquee/>
   </div>
 
 }

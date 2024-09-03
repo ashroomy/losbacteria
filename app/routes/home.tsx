@@ -13,8 +13,6 @@ import { useEffect, useRef, useState } from "react";
 
 
 export default function Home() {
-  const [maxWidth, setMaxWidth] = useState(0);
-  const [maxHeight, setMaxHeight] = useState(0)
   const [active,setActive] = useState('')
 
   const constraintsRef = useRef(null)
@@ -82,7 +80,7 @@ export default function Home() {
       height: '99px'
     },
     bloodbag:{
-      width:'90ox',
+      width:'90px',
       height:'96px'
     },
     cereal:{
@@ -178,7 +176,7 @@ export default function Home() {
           width: "98%",
           padding: "0",
           margin: "0",
-          height: "70vh",
+          height: "85vh",
           position: "relative",
           display:"flex",
           flexFlow:"wrap",
@@ -195,10 +193,14 @@ export default function Home() {
         <AnimatedImg src={soda} angle="-22.608" width={sizes.gum.width} id="soda-1" x={sodaX} y={sodaY} active={active}  setActive={setActive} />
         <AnimatedImg src={banana} angle="-88.182" width={sizes.banana.width} id="banana-1" x={bananaX} y={bananaY} active={active}  setActive={setActive} />
         <AnimatedImg src={banana} angle="110.164" width={sizes.banana.width} id="banana-2" x={bananaX1} y={bananaY1} active={active}  setActive={setActive} />
+        <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width} id="bloodbag-1" x={bloodbagX} y={bloodbagY} active={active}  setActive={setActive} />
+        <AnimatedImg  src={candy} angle="-71.974" width={sizes.candy.width} id="candy-2" x={candyX1} y={candyY1} active={active}  setActive={setActive} />
+
+        <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width} id="fries-1" x={friesX} y={friesY} active={active}  setActive={setActive} />
 
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width} id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />
-        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width} id="spray-1" x={sprayX} y={sprayY} active={active}  setActive={setActive} />
-        <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width} id="fries-1" x={friesX} y={friesY} active={active}  setActive={setActive} />
+        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width} id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
+        <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width} id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
         <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width} id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
 
 

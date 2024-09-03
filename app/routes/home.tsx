@@ -131,7 +131,7 @@ export default function Home() {
   };
 
 
-  const AnimatedImg = ({ active, setActive, id, x, y, width , src, angle}:any) => {
+  const AnimatedImg = ({ active, setActive, id, x, y, width, height , src, angle}:any) => {
     const isDragging = id === active;
       // console.log('transform', transform)
   const springConfig = {
@@ -154,7 +154,7 @@ export default function Home() {
         onDragStart={() => setActive(id)}
         style={{
           width: width,
-          height: 'fit-content',
+          height: height,
           x: isDragging ? x : dx,
           y: isDragging ? y : dy,
           zIndex: isDragging ? 1 : 0,
@@ -188,7 +188,7 @@ export default function Home() {
         animate="show"
       >
 
-        <AnimatedImg  src={candy} angle="-82.974" width={sizes.candy.width} id="candy-1" x={candyX} y={candyY} active={active}  setActive={setActive} />
+        <AnimatedImg  src={candy} angle="-82.974" height={sizes.candy.height} width={sizes.candy.width} id="candy-1" x={candyX} y={candyY} active={active}  setActive={setActive} />
         <AnimatedImg src={gum} angle="-12.013" width={sizes.gum.width} id="gum-1" x={gumX} y={gumY} active={active}  setActive={setActive} />
         <AnimatedImg src={soda} angle="-22.608" width={sizes.gum.width} id="soda-1" x={sodaX} y={sodaY} active={active}  setActive={setActive} />
         <AnimatedImg src={banana} angle="-88.182" width={sizes.banana.width} id="banana-1" x={bananaX} y={bananaY} active={active}  setActive={setActive} />

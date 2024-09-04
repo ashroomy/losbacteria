@@ -116,12 +116,17 @@ export default function Home() {
 
   }
 
-  const container = {
-    hidden: {
-      scale: 0,
-    },
-    show: {
-      transition: {scale:1 }
+  const rotateVariant = {
+    animate: {
+      x: ['', '-90vw'],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 10,
+          ease: "linear",
+        },
+      },
     }
   };
 
@@ -166,7 +171,8 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="flex-col h-full bg-squares ">
+
+      <div className="flex-col h-full  ">
       <motion.div
         ref={constraintsRef}
         style={{
@@ -302,9 +308,7 @@ export default function Home() {
         
 
       </div>
-
-      
-
+  
 
     </Layout>
 

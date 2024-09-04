@@ -1,9 +1,9 @@
 import { Navigation } from "./navigation"
 
 export function Layout({ children }: { children: React.ReactNode }) {
-	return <div>
+	return <div className="">
 		<Navigation/>
-		<div>
+		<div className="bg-squares bg-opacity-5">
 			{children}
 
 		</div>

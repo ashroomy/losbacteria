@@ -24,7 +24,7 @@ const marqueeVariants = {
 const Marquee = () => {
   return (
     <div>
-      <div className="relative w-full max-w-full h-[25px] bg-black py-[2px] overflow-x-hidden">
+      <div className="relative w-full max-w-full h-[26px] align-middle bg-black pb-[2px] overflow-x-hidden border-b border-solid border-white">
         <motion.div
           className=" track absolute flex-nowrap will-change-transform	"
           variants={marqueeVariants}

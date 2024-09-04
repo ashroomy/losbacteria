@@ -103,7 +103,8 @@ export default function Home() {
     },
     candy:{
       width:'79px',
-      height:'111px'
+      height:'111px',
+      size:79
     },    
     gum:{
       width:'98px',

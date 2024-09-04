@@ -137,31 +137,31 @@ export default function Home() {
     const isDragging = id === active;
     const springConfig = {
     stiffness: 90,
-    damping: 20 + 1 * 16,
+    damping: 399,
     };
   const gap=10;
   
   // const rotate = useTransform(x, [angle, ], [0, 2])
     const size= width;
-    const dx = useSpring(x+10, springConfig);
-    const dy = useSpring(y+10, springConfig);
-    console.log('ANDGLE', angle)
+    const dx = useSpring(x, springConfig);
+    const dy = useSpring(y, springConfig);
     return (
       <motion.img
          src={src}
         drag
         dragConstraints={constraintsRef}
-        dragTransition={{ bounceStiffness: 100, bounceDamping: 5 }}
+        dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
         dragElastic={0.8}
-        whileTap={{ cursor: "grabbing", scale:1.3 }}
+        whileTap={{ cursor: "grabbing", scale:1.5}}
         onDragStart={() => setActive(id)}
         style={{
           width: width,
           height: height,
           x: isDragging ? x : dx,
           y: isDragging ? y : dy,
+          cursor: "grab",
           zIndex: isDragging ? 1 : 0,
-          rotate:`${angle}deg`
+          rotate:  `${angle}deg`
         }
       }
       />
@@ -176,10 +176,10 @@ export default function Home() {
       <motion.div
         ref={constraintsRef}
         style={{
-          width: "99vw",
+          width: "92vw",
           padding: "0",
           margin: "0",
-          height: "85vh",
+          height: "fit-content",
           position: "relative",
           display:"flex", 
           justifyContent:"center",
@@ -200,11 +200,11 @@ export default function Home() {
         <AnimatedImg  src={candy} angle="-71.974" width={sizes.candy.width}   height={sizes.candy.height}   id="candy-2" x={candyX1} y={candyY1} active={active}  setActive={setActive} />
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-2" x={cerealX1} y={cerealY1} active={active}  setActive={setActive} />
 
-        <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-1" x={friesX} y={friesY} active={active}  setActive={setActive} />
+        <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
 
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />
         <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width }   height={sizes.spray.height}  id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
-        <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
+        <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-3" x={friesX2} y={friesY2} active={active}  setActive={setActive} />
         <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width}    height={sizes.gum.height}  id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
 
 

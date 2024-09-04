@@ -76,6 +76,7 @@ export default function Home() {
 
   const sizes = {
     soda:{
+      size:70,
       width:'70px',
       height: '99px'
     },
@@ -97,7 +98,8 @@ export default function Home() {
     },
     spray:{
       width:'79px',
-      height:'111px'
+      height:'111px',
+      size:79
     },
     candy:{
       width:'79px',
@@ -138,9 +140,10 @@ export default function Home() {
     stiffness: 90,
     damping: 20 + 1 * 5,
   };
-
+  const gap=10;
+  
   // const rotate = useTransform(x, [angle, ], [0, 2])
-
+    const size= width;
     const dx = useSpring(x, springConfig);
     const dy = useSpring(y, springConfig);
     return (
@@ -150,13 +153,15 @@ export default function Home() {
         dragConstraints={constraintsRef}
         dragTransition={{ bounceStiffness: 100, bounceDamping: 20 }}
         dragElastic={0.8}
-        whileTap={{ cursor: "grabbing" }}
+        whileTap={{ cursor: "grabbing", scale:1.2 }}
         onDragStart={() => setActive(id)}
         style={{
           width: width,
           height: height,
           x: isDragging ? x : dx,
           y: isDragging ? y : dy,
+          top: size+gap,
+          left:size+gap,
           zIndex: isDragging ? 1 : 0,
           rotate:`${angle}deg`,
           cursor: "grab",
@@ -179,6 +184,7 @@ export default function Home() {
           height: "85vh",
           position: "relative",
           display:"flex",
+          gap:'5px',
           flexFlow:"wrap",
           pageBreakInside:'avoid',
           marginTop:"auto"
@@ -188,20 +194,20 @@ export default function Home() {
         animate="show"
       >
 
-        <AnimatedImg  src={candy} angle="-82.974" height={sizes.candy.height} width={sizes.candy.width} id="candy-1" x={candyX} y={candyY} active={active}  setActive={setActive} />
-        <AnimatedImg src={gum} angle="-12.013" width={sizes.gum.width} id="gum-1" x={gumX} y={gumY} active={active}  setActive={setActive} />
-        <AnimatedImg src={soda} angle="-22.608" width={sizes.gum.width} id="soda-1" x={sodaX} y={sodaY} active={active}  setActive={setActive} />
-        <AnimatedImg src={banana} angle="-88.182" width={sizes.banana.width} id="banana-1" x={bananaX} y={bananaY} active={active}  setActive={setActive} />
-        <AnimatedImg src={banana} angle="110.164" width={sizes.banana.width} id="banana-2" x={bananaX1} y={bananaY1} active={active}  setActive={setActive} />
-        <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width} id="bloodbag-1" x={bloodbagX} y={bloodbagY} active={active}  setActive={setActive} />
-        <AnimatedImg  src={candy} angle="-71.974" width={sizes.candy.width} id="candy-2" x={candyX1} y={candyY1} active={active}  setActive={setActive} />
+        <AnimatedImg  src={candy} angle="-82.974" height={sizes.candy.height} size={sizes.candy.size} width={sizes.candy.width} id="candy-1" x={candyX} y={candyY} active={active}  setActive={setActive} />
+        <AnimatedImg src={gum} angle="-12.013" width={sizes.gum.width} height={sizes.gum.height}  id="gum-1" x={gumX} y={gumY} active={active}  setActive={setActive} />
+        <AnimatedImg src={soda} angle="-22.608" width={sizes.soda.width}  height={sizes.soda.height}  id="soda-1" x={sodaX} y={sodaY} active={active}  setActive={setActive} />
+        <AnimatedImg src={banana} angle="-88.182" width={sizes.banana.width} height={sizes.banana.height} id="banana-1" x={bananaX} y={bananaY} active={active}  setActive={setActive} />
+        <AnimatedImg src={banana} angle="110.164" width={sizes.banana.width}  height={sizes.banana.height}  id="banana-2" x={bananaX1} y={bananaY1} active={active}  setActive={setActive} />
+        <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width}   height={sizes.bloodbag.height}   id="bloodbag-1" x={bloodbagX} y={bloodbagY} active={active}  setActive={setActive} />
+        <AnimatedImg  src={candy} angle="-71.974" width={sizes.candy.width}   height={sizes.candy.height}   id="candy-2" x={candyX1} y={candyY1} active={active}  setActive={setActive} />
 
-        <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width} id="fries-1" x={friesX} y={friesY} active={active}  setActive={setActive} />
+        <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-1" x={friesX} y={friesY} active={active}  setActive={setActive} />
 
-        <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width} id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />
-        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width} id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
-        <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width} id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
-        <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width} id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
+        <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />
+        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width }   height={sizes.spray.height}  id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
+        <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
+        <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width}    height={sizes.gum.height}  id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
 
 
       {/* <motion.img   

@@ -9,12 +9,12 @@ import {
 } from "framer-motion";
 const marqueeVariants = {
   animate: {
-    x: ['0vw', '-20vw'],
+    x: ['0vw', '-90vw'],
     transition: {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 2,
+        duration: 4,
         ease: "linear",
       },
     },

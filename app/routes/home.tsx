@@ -116,6 +116,15 @@ export default function Home() {
 
   }
 
+  const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration:0.8
+    }
+  }
+}
   // const rotateVariant = {
   //   animate: {
   //     rotate: [0, 90, 180,90, 0 ],
@@ -152,7 +161,7 @@ export default function Home() {
         dragConstraints={constraintsRef}
         dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
         dragElastic={0.8}
-        whileTap={{ cursor: "grabbing", scale:1.5}}
+        whileTap={{ cursor: "grabbing", scale:1.}}
         onDragStart={() => setActive(id)}
         style={{
           width: width,
@@ -172,21 +181,23 @@ export default function Home() {
   return (
     <Layout>
 
-      <div className="flex-col h-full ">
+      <div className="flex h-full justi px-3 overflow-hidden ">
       <motion.div
         ref={constraintsRef}
         style={{
-          width: "92vw",
-          padding: "0",
-          margin: "0",
+          width: "94vw",
+          padding: "1.75rem 0 0 0",
           height: "fit-content",
           position: "relative",
           display:"flex", 
           justifyContent:"center",
           flexFlow:"wrap",
           pageBreakInside:'avoid',
-          marginTop:"auto"
         }}
+        variants={container}
+        initial="hidden"
+        animate="show"
+        // transition={}
       >
 
         <AnimatedImg  src={candy} angle="-82.974" height={sizes.candy.height} width={sizes.candy.width} id="candy-1" x={candyX} y={candyY} active={active}  setActive={setActive} />
@@ -198,14 +209,19 @@ export default function Home() {
         <AnimatedImg src={banana} angle="110.164" width={sizes.banana.width}  height={sizes.banana.height}  id="banana-2" x={bananaX1} y={bananaY1} active={active}  setActive={setActive} />
         <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width}   height={sizes.bloodbag.height}   id="bloodbag-1" x={bloodbagX} y={bloodbagY} active={active}  setActive={setActive} />
         <AnimatedImg  src={candy} angle="-71.974" width={sizes.candy.width}   height={sizes.candy.height}   id="candy-2" x={candyX1} y={candyY1} active={active}  setActive={setActive} />
+        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width }   height={sizes.spray.height}  id="spray-2" x={sprayX1} y={sprayY1} actidve={active}  setActive={setActive} />
+
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-2" x={cerealX1} y={cerealY1} active={active}  setActive={setActive} />
+        <AnimatedImg src={banana} angle="-88.182" width={sizes.banana.width} height={sizes.banana.height} id="banana-3" x={bananaX2} y={bananaY2} active={active}  setActive={setActive} />
+        <AnimatedImg  src={soda} angle="-71.974" width={sizes.soda.width}   height={sizes.soda.height}   id="soda-2" x={sodaX1} y={sodaY1} active={active}  setActive={setActive} />
+        <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width}    height={sizes.gum.height}  id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
 
         <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
 
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />
         <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width }   height={sizes.spray.height}  id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
         <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-3" x={friesX2} y={friesY2} active={active}  setActive={setActive} />
-        <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width}    height={sizes.gum.height}  id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
+        <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width}   height={sizes.bloodbag.height}   id="bloodbag-2" x={bloodbagX1} y={bloodbagY1} active={active}  setActive={setActive} />
 
 
       

@@ -206,6 +206,7 @@ export default function Home() {
         <AnimatedImg  src={soda} angle="-71.974" width={sizes.soda.width}   height={sizes.soda.height}   id="soda-2" x={sodaX1} y={sodaY1} active={active}  setActive={setActive} />
         <AnimatedImg src={gum} angle="-69.551" width={sizes.gum.width}    height={sizes.gum.height}  id="gum-2" x={gumX1} y={gumY1} active={active}  setActive={setActive} />
 
+        
         <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
 
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />

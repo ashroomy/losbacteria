@@ -9,12 +9,12 @@ import {
 } from "framer-motion";
 const marqueeVariants = {
   animate: {
-    x: ['0vw', '-90vw'],
+    x: ['0vw', '-50vw'],
     transition: {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 4,
+        duration: 5,
         ease: "linear",
       },
     },
@@ -31,7 +31,7 @@ const Marquee = () => {
           animate="animate"
         >
           <h6 className="text-white text-[14px] uppercase w-max inline-block " >
-           Ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas  ideas contagiosas ideas contagiosas  
+           Ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas ideas contagiosas  ideas contagiosas  
 
           </h6>
         </motion.div>

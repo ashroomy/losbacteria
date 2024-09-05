@@ -151,6 +151,7 @@ export default function Home() {
         dragConstraints={constraintsRef}
         dragTransition={{ bounceStiffness:200, bounceDamping: 9 }}
         dragElastic={0.8}
+        whileHover={{ cursor: "grabbing", scale:1.3}}
         whileTap={{ cursor: "grabbing", scale:1.3}}
         onDragStart={() => setActive(id)}
         style={{

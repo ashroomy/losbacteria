@@ -11,7 +11,7 @@
     }
     @font-face {
       font-family: "kiffo-bold";
-      src: url("/assets/fonts/Kiffo-BT-Bold-Bold.woff");
+      src: url("./assets/Kiffo-BT-Bold.woff");
     }
     @font-face {
       font-family: "kiffo-extra-light";

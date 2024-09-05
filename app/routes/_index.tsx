@@ -81,7 +81,7 @@ export default function Index() {
       <main>
         <div className="font-kiffoR flex align-left justify-start">
           <div className="flex flex-col gap-3 xs:p-5 md:p-6  text-2xl">
-            <p className="text-primary ">Si estás leyendo esto, felicidades, oficialmente te hemos infectado. Ya no hay vuelta atrás. Podés ver el catálogo de nuestros productos <a href="./static/bacteria_menu.pdf"  target="_blank" rel="noopener noreferrer" className="underline">aquí</a> o escribirnos a nuestro <a className="underline" href="mailto:infectados@losbacteria.com">correo aquí</a>. También podés dejarnos tu correo para enterarte de lo que viene.  </p>
+            <p className="text-primary ">Si estás leyendo esto, felicidades, oficialmente te hemos infectado. Ya no hay vuelta atrás. Podés ver el catálogo de nuestros productos <a href="./static/bacteria_menu.pdf"  target="_blank" rel="noopener noreferrer" className="underline font-KiffoB"> aquí</a> o escribirnos a nuestro <a className="underline font-KiffoB" href="mailto:infectados@losbacteria.com">correo aquí</a>. También podés dejarnos tu correo para enterarte de lo que viene.  </p>
             <Form reloadDocument method="post" className="flex flex-col gap-2">
 
               <FormField

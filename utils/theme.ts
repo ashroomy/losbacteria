@@ -2,6 +2,7 @@ export const extendedTheme = {
   extend: {
     fontFamily: {
       'kiffoR': ['kiffo-regular', 'sans-serif'],
+      'KiffoB':['kiffo-bold', 'sans-serif'],
       'bacteria': ['bacteria'],
     },
     colors: {

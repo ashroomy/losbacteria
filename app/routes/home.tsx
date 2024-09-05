@@ -21,23 +21,16 @@ export default function Home() {
   const sodaY =  useMotionValue(0)
   const sodaX1 = useMotionValue(0)
   const sodaY1 =  useMotionValue(0)
-  const sodaX2 = useMotionValue(0)
-  const sodaY2 =  useMotionValue(0)
   
   const bloodbagX = useMotionValue(0)
   const bloodbagY = useMotionValue(0)
   const bloodbagX1 = useMotionValue(0)
   const bloodbagY1 = useMotionValue(0)
-  const bloodbagX2 = useMotionValue(0)
-  const bloodbagY2 = useMotionValue(0)
   
   const cerealX = useMotionValue(0)
   const cerealY = useMotionValue(0)
   const cerealX1 = useMotionValue(0)
   const cerealY1 = useMotionValue(0)
-  const cerealX2 = useMotionValue(0)
-  const cerealY2 = useMotionValue(0)
-
 
   const bananaX = useMotionValue(0)
   const bananaY = useMotionValue(0)
@@ -57,8 +50,6 @@ export default function Home() {
   const gumY = useMotionValue(0)
   const gumX1 = useMotionValue(0)
   const gumY1 = useMotionValue(0)
-  const gumX2 = useMotionValue(0)
-  const gumY2 = useMotionValue(0)
   
   const candyX = useMotionValue(0)
   const candyY = useMotionValue(0)
@@ -71,8 +62,7 @@ export default function Home() {
   const sprayY = useMotionValue(0)
   const sprayX1 = useMotionValue(0)
   const sprayY1 = useMotionValue(0)
-  const sprayX2 = useMotionValue(0)
-  const sprayY2 = useMotionValue(0)
+
 
   const sizes = {
     soda:{
@@ -100,9 +90,9 @@ export default function Home() {
       height:'111px'
     },
     spray:{
-      width:'79px',
-      height:'111px',
-      size:79
+      width:'85px',
+      height:'127px',
+      size:85
     },
     candy:{
       width:'79px',
@@ -145,8 +135,8 @@ export default function Home() {
   const AnimatedImg = ({ active, setActive, id, x, y, width, height , src, angle}:any) => {
     const isDragging = id === active;
     const springConfig = {
-    stiffness: 90,
-    damping: 399,
+    stiffness: 900,
+    damping: 10,
     };
   const gap=10;
   
@@ -159,7 +149,7 @@ export default function Home() {
          src={src}
         drag
         dragConstraints={constraintsRef}
-        dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
+        dragTransition={{ bounceStiffness:200, bounceDamping: 9 }}
         dragElastic={0.8}
         whileTap={{ cursor: "grabbing", scale:1.3}}
         onDragStart={() => setActive(id)}
@@ -169,7 +159,7 @@ export default function Home() {
           x: isDragging ? x : dx,
           y: isDragging ? y : dy,
           cursor: "grab",
-          zIndex: isDragging ? 1 : 0,
+          zIndex: isDragging ? 99 : 0,
           rotate:  `${angle}deg`
         }
       }
@@ -197,7 +187,6 @@ export default function Home() {
         variants={container}
         initial="hidden"
         animate="show"
-        // transition={}
       >
 
         <AnimatedImg  src={candy} angle="-82.974" height={sizes.candy.height} width={sizes.candy.width} id="candy-1" x={candyX} y={candyY} active={active}  setActive={setActive} />
@@ -209,7 +198,7 @@ export default function Home() {
         <AnimatedImg src={banana} angle="110.164" width={sizes.banana.width}  height={sizes.banana.height}  id="banana-2" x={bananaX1} y={bananaY1} active={active}  setActive={setActive} />
         <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width}   height={sizes.bloodbag.height}   id="bloodbag-1" x={bloodbagX} y={bloodbagY} active={active}  setActive={setActive} />
         <AnimatedImg  src={candy} angle="-71.974" width={sizes.candy.width}   height={sizes.candy.height}   id="candy-2" x={candyX1} y={candyY1} active={active}  setActive={setActive} />
-        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width }   height={sizes.spray.height}  id="spray-2" x={sprayX1} y={sprayY1} actidve={active}  setActive={setActive} />
+        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width}   height={sizes.spray.height}  id="spray-2" x={sprayX1} y={sprayY1} actidve={active}  setActive={setActive} />
 
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-2" x={cerealX1} y={cerealY1} active={active}  setActive={setActive} />
         <AnimatedImg src={banana} angle="-88.182" width={sizes.banana.width} height={sizes.banana.height} id="banana-3" x={bananaX2} y={bananaY2} active={active}  setActive={setActive} />
@@ -219,7 +208,7 @@ export default function Home() {
         <AnimatedImg  src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-2" x={friesX1} y={friesY1} active={active}  setActive={setActive} />
 
         <AnimatedImg  src={cereal} angle="-3.435" width={sizes.cereal.width}   height={sizes.cereal.height}   id="cereal-1" x={cerealX} y={cerealY} active={active}  setActive={setActive} />
-        <AnimatedImg src={spray} angle="54.328" width={sizes.spray.width }   height={sizes.spray.height}  id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
+        <AnimatedImg src={spray} angle="2" width={sizes.spray.width}   height={sizes.spray.height}  id="spray-1" x={sprayX} y={sprayY} actidve={active}  setActive={setActive} />
         <AnimatedImg src={fries} angle="53.385" width={sizes.fries.width}   height={sizes.fries.height}   id="fries-3" x={friesX2} y={friesY2} active={active}  setActive={setActive} />
         <AnimatedImg  src={bloodbag} angle="-2.89" width={sizes.bloodbag.width}   height={sizes.bloodbag.height}   id="bloodbag-2" x={bloodbagX1} y={bloodbagY1} active={active}  setActive={setActive} />
 

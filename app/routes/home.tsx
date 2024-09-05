@@ -115,21 +115,21 @@ export default function Home() {
     }
   }
 }
-  // const rotateVariant = {
-  //   animate: {
-  //     rotate: [0, 90, 180,90, 0 ],
-  //     transition: {
-  //       x: {
-  //         repeat: Infinity,
-  //         repeatType: "loop",
-  //         duration: 10,
-  //         times: [0, 0.2, 0.5, 0.8, 1],
+  const rotateVariant = {
+   
+      rotate: [0, 90, 180,90, 0 ],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 10,
+          times: [0, 0.2, 0.5, 0.8, 1],
 
-  //         ease: "easeInOut",
-  //       },
-  //     },
-  //   }
-  // };
+          ease: "easeInOut",
+        },
+      },
+  
+  };
 
 
   const AnimatedImg = ({ active, setActive, id, x, y, width, height , src, angle}:any) => {
@@ -178,7 +178,7 @@ export default function Home() {
         style={{
           width: "94vw",
           padding: "1.75rem 0 0 0",
-          height: "fit-content",
+          height: "calc(100%-90px)",
           position: "relative",
           display:"flex", 
           justifyContent:"center",

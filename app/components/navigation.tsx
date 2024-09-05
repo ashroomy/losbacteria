@@ -29,7 +29,7 @@ export function Navigation() {
       </a>
 
     </h1>
-    {/* <button className="text-[50px]"> 🦠 </button> */}
+    <a  href="./static/bacteria_menu.pdf"  target="_blank" rel="noopener noreferrer" className="text-[50px]"> 🦠 </a>
 
 
   </nav>
